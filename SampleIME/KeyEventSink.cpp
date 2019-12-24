@@ -278,22 +278,22 @@ STDAPI CSampleIME::OnSetFocus(BOOL fForeground)
 
 STDAPI CSampleIME::OnTestKeyDown(ITfContext *pContext, WPARAM wParam, LPARAM lParam, BOOL *pIsEaten)
 {
-    Global::UpdateModifiers(wParam, lParam);
+    //Global::UpdateModifiers(wParam, lParam);
 
-    _KEYSTROKE_STATE KeystrokeState;
-    WCHAR wch = '\0';
-    UINT code = 0;
-    *pIsEaten = _IsKeyEaten(pContext, (UINT)wParam, &code, &wch, &KeystrokeState);
+    //_KEYSTROKE_STATE KeystrokeState;
+    //WCHAR wch = '\0';
+    //UINT code = 0;
+    //*pIsEaten = _IsKeyEaten(pContext, (UINT)wParam, &code, &wch, &KeystrokeState);
 
-    if (KeystrokeState.Category == CATEGORY_INVOKE_COMPOSITION_EDIT_SESSION)
-    {
-        //
-        // Invoke key handler edit session
-        //
-        KeystrokeState.Category = CATEGORY_COMPOSING;
+    //if (KeystrokeState.Category == CATEGORY_INVOKE_COMPOSITION_EDIT_SESSION)
+    //{
+    //    //
+    //    // Invoke key handler edit session
+    //    //
+    //    KeystrokeState.Category = CATEGORY_COMPOSING;
 
-        _InvokeKeyHandler(pContext, code, wch, (DWORD)lParam, KeystrokeState);
-    }
+    //    _InvokeKeyHandler(pContext, code, wch, (DWORD)lParam, KeystrokeState);
+    //}
 
     return S_OK;
 }
@@ -357,17 +357,17 @@ STDAPI CSampleIME::OnKeyDown(ITfContext *pContext, WPARAM wParam, LPARAM lParam,
 
 STDAPI CSampleIME::OnTestKeyUp(ITfContext *pContext, WPARAM wParam, LPARAM lParam, BOOL *pIsEaten)
 {
-    if (pIsEaten == nullptr)
-    {
-        return E_INVALIDARG;
-    }
+    //if (pIsEaten == nullptr)
+    //{
+    //    return E_INVALIDARG;
+    //}
 
-    Global::UpdateModifiers(wParam, lParam);
+    //Global::UpdateModifiers(wParam, lParam);
 
-    WCHAR wch = '\0';
-    UINT code = 0;
+    //WCHAR wch = '\0';
+    //UINT code = 0;
 
-    *pIsEaten = _IsKeyEaten(pContext, (UINT)wParam, &code, &wch, NULL);
+    //*pIsEaten = _IsKeyEaten(pContext, (UINT)wParam, &code, &wch, NULL);
 
     return S_OK;
 }
