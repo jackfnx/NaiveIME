@@ -1490,12 +1490,12 @@ HRESULT CSampleIME::GetComModuleName(REFGUID rclsid, _Out_writes_(cchPath)WCHAR*
 
 void CCompositionProcessorEngine::InitKeyStrokeTable()
 {
-    for (int i = 0; i < 26; i++)
-    {
-        _keystrokeTable[i].VirtualKey = 'A' + i;
-        _keystrokeTable[i].Modifiers = 0;
-        _keystrokeTable[i].Function = FUNCTION_INPUT;
-    }
+    //for (int i = 0; i < 26; i++)
+    //{
+    //    _keystrokeTable[i].VirtualKey = 'A' + i;
+    //    _keystrokeTable[i].Modifiers = 0;
+    //    _keystrokeTable[i].Function = FUNCTION_INPUT;
+    //}
 }
 
 void CCompositionProcessorEngine::ShowAllLanguageBarIcons()
