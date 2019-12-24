@@ -540,7 +540,7 @@ void CCompositionProcessorEngine::GetCandidateStringInConverted(CStringRange &se
 
 BOOL CCompositionProcessorEngine::IsPunctuation(WCHAR wch)
 {
-    for (int i = 0; i < ARRAYSIZE(Global::PunctuationTable); i++)
+    /*for (int i = 0; i < ARRAYSIZE(Global::PunctuationTable); i++)
     {
         if (Global::PunctuationTable[i]._Code == wch)
         {
@@ -570,7 +570,7 @@ BOOL CCompositionProcessorEngine::IsPunctuation(WCHAR wch)
         {
             return TRUE;
         }
-    }
+    }*/
     return FALSE;
 }
 
